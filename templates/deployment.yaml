@@ -28,6 +28,11 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
+        - name: port_number
+          valueFrom:
+           configMapKeyRef:
+              name: demo-data
+              key: port_number
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}

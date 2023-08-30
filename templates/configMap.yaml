@@ -1,0 +1,6 @@
+apiversion: v1
+kind: configMap
+Metadata:
+   name: demo-data
+data:
+  port_number: 1234
