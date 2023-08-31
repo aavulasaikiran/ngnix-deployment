@@ -51,8 +51,8 @@ spec:
           volumeMounts:
             # `name` here must match the name
             # from the volumes section of this pod
-            - name: example-configmap-volume
-                mountPath: /etc/config
+            - name: "example-configmap-volume"
+                mountPath: "/etc/config"
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
