@@ -47,7 +47,7 @@ spec:
               path: /
               port: 80
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            { }
           volumeMounts:
             # `name` here must match the name
             # from the volumes section of this pod
